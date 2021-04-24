@@ -1,0 +1,23 @@
+version: '3.2'
+
+services: 
+  cypress-chrome:
+    hostname: cypress
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    ipc: host
+    shm_size: '2gb'
+    environment:
+    - CYPRESS_BASE_URL=https://gfc-russia.ru
+    volumes:
+    - .:/docker_bin
+
+networks:
+  default:
+    driver_opts:
+      com.docker.network.driver.mtu: 1450
+    ipam:
+      driver: default
+      config:
+        - subnet: ${SUBNET:-192.168.5.0/24}

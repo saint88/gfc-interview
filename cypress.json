@@ -1,0 +1,15 @@
+{
+	"testFiles": "**/*.ts",
+	"video": false,
+	"videoUploadOnPasses": false,
+	"screenshotOnRunFailure": false,
+	"trashAssetsBeforeRuns": false,
+	"projectId": "gfc",
+	"redirectionLimit": 5,
+	"waitForAnimations": false,
+	"numTestsKeptInMemory": 150,
+	"watchForFileChanges": false,
+	"modifyObstructiveCode": false,
+	"blockHosts": [],
+	"animationDistanceThreshold": 20
+}
